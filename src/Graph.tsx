@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Table } from '@finos/perspective';
 import { ServerRespond } from './DataStreamer';
 import './Graph.css';
-import { EMLINK } from 'constants';
 
 /**
  * Props declaration for <Graph />
@@ -56,10 +55,10 @@ class Graph extends Component<IProps, {}> {
       elem.setAttribute('row-pivots', '["timestamp"]');
       elem.setAttribute('columns', '["top_ask_price"]');
       elem.setAttribute('aggregates', `
-      {"stock":"distinct count",
+      {"stock":"distinct_count",
        "top_ask_price":"avg",
       "top_bid_price":"avg",
-      "timestamp":"distinct count"}`);
+      "timestamp":"distinct_count"}`);
 
     }
   }
